@@ -127,3 +127,9 @@ Home now distinguishes Watch traffic, Start a round and Preview a course. Watch 
 Player scenario changes produce dismissible in-app traffic alerts with a short simulation-time cooldown. Optional browser notifications require an explicit permission action and run only while the page executes. They are not remote/background push and delivery on actual iOS/Android devices has not been verified. Watchers do not receive player pace warnings. Shared live location feeds remain unconnected.
 
 Vector detail mode permits zoom to level 19; aerial mode retains its 16.75 cap against cached native level 16. A higher-resolution dynamic NAIP image service was investigated, but a direct image request did not complete reliably within the test timeout, so it was not made the app's default. No unverified claim of sharper aerial imagery is made. The preview provides fullscreen with native iOS video fallback; existing source video resolution is unchanged.
+
+## Product overview refresh
+
+The new about.html is a standalone, mobile-friendly overview linked from the active app. The legacy dashboard About view reuses the same aboutMarkup. It describes the intended tee-time group/member model, individual location opt-in, a representative group focus, course/team benefits, and golfer-first escalation. It clearly distinguishes current simulation/browser-only GPS from planned verified membership, shared GPS, zone detection, calibrated finish estimates, staff operations and remote push.
+
+The About hero is an explicitly labelled product illustration using an existing Bandon photograph, not a screenshot of a connected round or a new media acquisition. Existing media rights limitations apply. The interactive four-step walkthrough has accessible pressed states and invalid-index handling. Product outcomes are presented as pilot hypotheses, not proven guarantees.
