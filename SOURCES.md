@@ -34,3 +34,9 @@ https://tours.skyfoxgolf.com/storage/thumbnails/pinehurst_no2/hole1_thumbnail.jp
 Golfers, group names, current hole assignments, time spent on holes, fairway progress and ETA data are simulated. Group markers use elapsed time as a fraction of the demo hole target and a simple camera-progress screen projection. They do not represent geographic coordinates or computer-vision-tracked points in the footage. No GPS, Pinehurst tee-sheet feed, or course operations feed is connected. Original schematic overview remains illustrative; the hole journey uses course-specific photos and the source video.
 
 This is an independent concept demo, not an official Pinehurst, SkyFox or Golf Digest product.
+
+## Interactive round map
+
+`round-demo.html` adds a Leaflet/OpenStreetMap interactive demo, linked from the existing workspace. Leaflet 1.9.4 loads from unpkg; standard tiles load directly from tile.openstreetmap.org with OpenStreetMap attribution. Community tiles are used for modest interactive demonstration only, without bulk downloads or prefetch. See https://operations.osmfoundation.org/policies/tiles/ before production rollout. This is a standard basemap, not satellite imagery.
+
+All numbered group markers are simulated on synthetic routes near approximate course centers. They are not verified hole locations or live people. Hole shortcuts intentionally open the illustrative diagram until accurate hole geometry is supplied. Optional device geolocation appears as a separate blue marker; permission is requested only after pressing Show my location, and coordinates stay in the browser. No location uploads, cross-device sharing, or background tracking are enabled in this static release. Stop GPS, leaving the page, ending or resetting the round stops its watcher. Four-course timing windows, alerts and $5 credit outcomes remain simulated.
