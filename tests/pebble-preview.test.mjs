@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {existsSync,readFileSync} from 'node:fs';
+import {getPreviewCourse} from '../dist/preview-courses.js';
+import {holeState,mapPoints,mapDistance} from '../dist/bandon-model.js';
+import {courses} from '../dist/course-registry.js';
+test('Pebble is available in shared preview and main traffic view',()=>{assert.equal(getPreviewCourse('pebble').name,'Pebble Beach Golf Links');assert.equal(courses.find(c=>c.id==='pebble').media,true);assert.equal(getPreviewCourse('pebble').teeNames.length,5);});
+test('Pebble uses its own five official scorecard tee sets',()=>{const d=getPreviewCourse('pebble').data;assert.deepEqual(d.courseYardage,[6802,6472,6083,5547,5125]);assert.equal(holeState(7,1,'pebble').yards,107);assert.equal(holeState(18,1,'pebble').yards,541);assert.equal(d.holePar.slice(1).reduce((a,b)=>a+b,0),72);});
+test('all Pebble holes have independent HD, SD, poster and map files',()=>{for(let h=1;h<=18;h++){const n=String(h).padStart(2,'0');for(const file of [`flight-${n}.mp4`,`flight-${n}-sd.mp4`,`flight-${n}.jpg`,`hole-${n}.svg`])assert.ok(existsSync(new URL(`../dist/assets/pebble/${file}`,import.meta.url)),file);const p=mapPoints(h,1,'pebble');assert.equal(mapDistance(h,1,p.pin,'pebble').fromTee,holeState(h,1,'pebble').yards);}});
+test('source cuts cover all 18 holes, in order, with a final frame hold',()=>{const manifest=JSON.parse(readFileSync(new URL('../dist/assets/pebble/manifest.json',import.meta.url)));assert.equal(manifest.length,18);for(let i=0;i<18;i++){const m=manifest[i];assert.equal(m.hole,i+1);assert.ok(m.sourceEnd>m.sourceStart);assert.ok(m.hd.duration>=7.9&&m.hd.duration<=8.1);assert.equal(m.finalHoldSeconds,.5);if(i)assert.ok(m.sourceStart>=manifest[i-1].sourceEnd);}});

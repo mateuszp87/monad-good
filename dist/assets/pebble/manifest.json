@@ -1,0 +1,254 @@
+[
+  {
+    "hole": 1,
+    "sourceStart": 56.381125000000004,
+    "sourceEnd": 82.724458,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2399939
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 673183
+    }
+  },
+  {
+    "hole": 2,
+    "sourceStart": 83.074458,
+    "sourceEnd": 108.83387499999999,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2668135
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 779855
+    }
+  },
+  {
+    "hole": 3,
+    "sourceStart": 109.183875,
+    "sourceEnd": 133.525208,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2263314
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 671155
+    }
+  },
+  {
+    "hole": 4,
+    "sourceStart": 133.875208,
+    "sourceEnd": 149.58291699999998,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2095675
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 605795
+    }
+  },
+  {
+    "hole": 5,
+    "sourceStart": 149.93291699999997,
+    "sourceEnd": 167.225542,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2855385
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 807651
+    }
+  },
+  {
+    "hole": 6,
+    "sourceStart": 172.62224999999998,
+    "sourceEnd": 199.132417,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 1979983
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 546281
+    }
+  },
+  {
+    "hole": 7,
+    "sourceStart": 199.482417,
+    "sourceEnd": 229.120708,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2282887
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 604267
+    }
+  },
+  {
+    "hole": 8,
+    "sourceStart": 229.470708,
+    "sourceEnd": 257.89945800000004,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2097285
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 584101
+    }
+  },
+  {
+    "hole": 9,
+    "sourceStart": 258.249458,
+    "sourceEnd": 271.704917,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 1747495
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 519597
+    }
+  },
+  {
+    "hole": 10,
+    "sourceStart": 272.054917,
+    "sourceEnd": 296.312833,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 1945783
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 578603
+    }
+  },
+  {
+    "hole": 11,
+    "sourceStart": 296.662833,
+    "sourceEnd": 309.033875,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2438483
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 713021
+    }
+  },
+  {
+    "hole": 12,
+    "sourceStart": 309.383875,
+    "sourceEnd": 315.62379200000004,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.041667,
+      "bytes": 2394558
+    },
+    "sd": {
+      "duration": 8.041667,
+      "bytes": 744606
+    }
+  },
+  {
+    "hole": 13,
+    "sourceStart": 315.973792,
+    "sourceEnd": 343.35983300000004,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2701619
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 785120
+    }
+  },
+  {
+    "hole": 14,
+    "sourceStart": 343.709833,
+    "sourceEnd": 375.141583,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2317347
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 661572
+    }
+  },
+  {
+    "hole": 15,
+    "sourceStart": 375.491583,
+    "sourceEnd": 400.04145800000003,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 3393915
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 964801
+    }
+  },
+  {
+    "hole": 16,
+    "sourceStart": 422.747125,
+    "sourceEnd": 436.452833,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2926873
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 861294
+    }
+  },
+  {
+    "hole": 17,
+    "sourceStart": 436.80283299999996,
+    "sourceEnd": 473.781792,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 1605633
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 441934
+    }
+  },
+  {
+    "hole": 18,
+    "sourceStart": 474.13179199999996,
+    "sourceEnd": 505.73037500000004,
+    "finalHoldSeconds": 0.5,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2334401
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 694878
+    }
+  }
+]

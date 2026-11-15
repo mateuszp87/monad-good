@@ -24,12 +24,12 @@ function pointOnMap(e){if(e.target.closest('[data-tee]'))return;const svg=$('#ho
 $('#hole-map').addEventListener('pointermove',pointOnMap);$('#hole-map').addEventListener('pointerdown',pointOnMap);
 function refreshCourseUI(){
  document.querySelector('.hole-description h1').textContent=course.name;
- document.querySelector('.flyover').setAttribute('aria-label',`${course.name} hole flyover`);$('#course-map-frame').setAttribute('title',`${course.name} OpenStreetMap overview`);$('#preview-reference').href=course.id==='pinehurst'?'https://www.pinehurst.com/golf/courses/no-2/':'https://coursepreview.golf/bandondunes/';
+ document.querySelector('.flyover').setAttribute('aria-label',`${course.name} hole flyover`);$('#course-map-frame').setAttribute('title',`${course.name} OpenStreetMap overview`);$('#preview-reference').href=course.sourceUrl;
  document.querySelector('.hole-description small').textContent=`Independent Fairway Flow demo · ${course.source} · map pointers and tee anchors are approximate, not surveyed yardage.`;
  $('#hole-map').setAttribute('aria-label',`${course.name} hole map, point or tap for approximate yardage`);
- const emblem=document.querySelector('.bandon-emblem');emblem.src=course.logo;emblem.alt=course.name;emblem.style.filter=course.id==='pinehurst'?'brightness(0) invert(1)':'';
+ const emblem=document.querySelector('.bandon-emblem');emblem.src=course.logo;emblem.alt=course.name;emblem.style.filter=course.id!=='bandon'?'brightness(0) invert(1)':'';
  $('#hole-tiles').innerHTML=Array.from({length:18},(_,i)=>`<button class="hole-tile" data-hole="${i+1}" style="background-image:url('${media(i+1,course.photoPrefix)}.jpg')"><strong>${i+1}</strong><small>PAR ${(bandon.pars?.[tee]||bandon.holePar)[i+1]}</small></button>`).join('');
- $('#courses-panel').innerHTML='<h2>EXPLORE A COURSE</h2>'+previewCourses.map(c=>`<button class="selected-course" data-course="${c.id}" aria-pressed="${c.id===course.id}">${c.name}<span>${c.id===course.id?'✓':'↗'}</span></button>`).join('')+'<p>Both courses share the same hole-by-hole controls.</p>';
+ $('#courses-panel').innerHTML='<h2>EXPLORE A COURSE</h2>'+previewCourses.map(c=>`<button class="selected-course" data-course="${c.id}" aria-pressed="${c.id===course.id}">${c.name}<span>${c.id===course.id?'✓':'↗'}</span></button>`).join('')+'<p>All courses share the same hole-by-hole controls.</p>';
 }
 function selectCourse(id){course=getPreviewCourse(id);bandon=course.data;teeNames=course.teeNames;teeColors=course.teeColors;tee=course.defaultTee;refreshCourseUI();setHole(1);toggleMenu(false);}
 

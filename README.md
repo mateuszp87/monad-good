@@ -90,3 +90,7 @@ The shared interface uses `dist/course-registry.js` and `dist/data/{bandon,pineh
 Open `/course-preview.html?course=pinehurst&hole=1` for Pinehurst No. 2 or `/course-preview.html?course=bandon&hole=1` for Bandon. The same UI provides hole selection, scroll scrubbing, SD/HD, full view, tee markers, yardage estimates, scorecard, handicap chart and geographic overview. Use the Courses tab to switch without changing the layout. The main course traffic map’s Flyover link preserves the selected course and hole.
 
 Pinehurst has eighteen independent maps and flyovers and seven official tee sets. The generated maps use existing OpenStreetMap geometry; tee placement and map pointer distances are approximate. Browser visual comparison remains unverified in this environment.
+
+## Pebble Beach
+
+Pebble Beach Golf Links now has its own 18 hole flyovers in HD/SD, poster frames, geographic hole maps, and five scorecard tee sets in the shared preview. Open `/course-preview.html?course=pebble&hole=1`, choose it in the preview’s Courses menu, or select it in the main course search and open Flyover. See SOURCES.md and the Pebble media manifest for the supplied video, source intervals, scorecard and map provenance. No live GPS or real ball tracking is inferred from the footage.
