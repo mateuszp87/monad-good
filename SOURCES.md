@@ -120,3 +120,10 @@ Five tee sets, pars and men’s handicaps come from Pebble Beach’s linked offi
 Requested video: https://www.youtube.com/watch?v=GgOb7N7pY80 . Matching publisher: https://www.golfdigest.com/video/every-hole-at/every-hole-at-tpc-sawgrass . All 18 hole segments are retimed into scrollable HD/SD clips with a final-frame hold; source intervals are recorded in `dist/assets/sawgrass/manifest.json`. Original footage title cards reflect its recording date.
 
 Selected tee yardages use the Stadium Course page of the official 2025 scorecard: https://tpc.com/sawgrass/wp-content/uploads/sites/51/2025/01/TPC_Sawgrass-Scorecard.pdf . Six tee sets, par 72. Maps use existing OpenStreetMap course routes and terrain; shorter-tee anchors and distance tools are illustrative rather than surveyed GPS measurements.
+## Phone-first watching and playing
+
+Home now distinguishes Watch traffic, Start a round and Preview a course. Watch mode runs the simulation without joining a player round or requesting location. Start my demo round exits watching and resets the player timeline. Labels distinguish the followed group from the player's demo group. Mobile navigation provides Courses, Map and Traffic, and markers have larger touch/visual targets.
+
+Player scenario changes produce dismissible in-app traffic alerts with a short simulation-time cooldown. Optional browser notifications require an explicit permission action and run only while the page executes. They are not remote/background push and delivery on actual iOS/Android devices has not been verified. Watchers do not receive player pace warnings. Shared live location feeds remain unconnected.
+
+Vector detail mode permits zoom to level 19; aerial mode retains its 16.75 cap against cached native level 16. A higher-resolution dynamic NAIP image service was investigated, but a direct image request did not complete reliably within the test timeout, so it was not made the app's default. No unverified claim of sharper aerial imagery is made. The preview provides fullscreen with native iOS video fallback; existing source video resolution is unchanged.
