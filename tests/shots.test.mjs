@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {teeSets,shotPlan,arcPoint,shotScene,shotControls,shotOverlay,mountShots} from '../dist/shots.js';
+test('tee-specific scorecard data and resort par changes match Pinehurst',()=>{assert.equal(teeSets.open.yards.reduce((a,b)=>a+b,0),7588);assert.equal(teeSets.blue.yards.reduce((a,b)=>a+b,0),6961);assert.equal(teeSets.white.yards.reduce((a,b)=>a+b,0),6307);assert.equal(shotPlan(8,'open').par,4);assert.equal(shotPlan(8,'white').par,5);});
+test('changing tee or carry recalculates remaining illustrative yardage',()=>{assert.equal(shotPlan(3,'open',250).remaining,137);assert.equal(shotPlan(3,'white',250).remaining,80);assert.equal(shotPlan(3,'white',200).remaining,130);assert.equal(shotPlan(9,'white',250).carry,148);assert.equal(shotPlan(9,'white',250).remaining,0);});
+test('yardage markers stay within each hole, including short par threes',()=>{for(const tee of Object.keys(teeSets))for(let h=1;h<=18;h++){const p=shotPlan(h,tee);assert.ok(p.ticks.every(y=>y>0&&y<p.yards));assert.equal(p.carry+p.remaining,p.yards);}assert.throws(()=>shotPlan(19),RangeError);});
+test('illustrative ball flight has a defined origin, apex and landing',()=>{const start={x:0,y:70},end={x:50,y:40};assert.deepEqual(arcPoint(0,start,end),start);assert.deepEqual(arcPoint(1,start,end),end);assert.ok(arcPoint(.5,start,end).y<40);const plan=shotPlan(1);assert.notDeepEqual(shotScene(plan,0),shotScene(plan,1));});
+test('tee, carry and layer controls produce visible changes through their event handlers',()=>{
+ const elements=new Map();const get=key=>{if(!elements.has(key))elements.set(key,{textContent:'',innerHTML:'',style:{},setAttribute(k,v){this[k]=v;}});return elements.get(key);};
+ const events={};const controls={addEventListener(k,fn){events[k]=fn;},removeEventListener(k){delete events[k];}};
+ const root={querySelector(key){return key==='.shot-controls'?controls:get(key);}};
+ const shots=mountShots(root,()=>{}, {matches:true});shots.draw(3,0);
+ assert.equal(get('#shot-hole-yards').textContent,387);
+ events.change({target:{id:'shot-tee',value:'white'}});assert.equal(get('#shot-hole-yards').textContent,330);assert.equal(get('#shot-remaining').textContent,80);
+ events.change({target:{id:'shot-carry',value:'200'}});assert.equal(get('#shot-remaining').textContent,130);
+ events.change({target:{id:'shot-show-flight',checked:false}});assert.equal(get('#shot-trace').style.display,'none');
+ events.change({target:{id:'shot-show-yards',checked:false}});assert.equal(get('#shot-yardage-markers').innerHTML,'');
+ events.click({target:{closest(){return {};}}});assert.equal(get('#shot-trace').style.display,'');
+});
+test('shot UI includes clear illustrative labeling and all interaction controls',()=>{assert.ok(shotControls().includes('NOT MEASURED'));for(const id of ['shot-tee','shot-carry','shot-replay','shot-show-yards','shot-show-flight'])assert.ok(shotControls().includes(`id="${id}"`));assert.ok(shotOverlay().includes('shot-ball'));});

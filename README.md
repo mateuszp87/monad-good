@@ -70,3 +70,11 @@ Open `/?view=rewards` and click **Connect MetaMask + Monad Testnet** in a browse
 Only account access, network management and read operations are used. No signing, asset approvals, transfers, contract deployment or badge minting is implemented. Wallet addresses are kept in session memory, not stored in browser persistence. Wallet connection is not a verified login. Badges still need a contract and course attestation backend.
 
 Official configuration: https://docs.monad.xyz/developer-essentials/testnet and https://docs.monad.xyz/guides/add-monad-to-wallet/testnet . RPC: https://testnet-rpc.monad.xyz ; explorer: https://testnet.monadvision.com ; faucet: https://faucet.monad.xyz . Public endpoints may be rate limited. Provider tests use mocks; actual MetaMask approval and end-to-end network access must be completed in the user’s browser.
+
+## Yardage and ball-flight preview
+
+In the course view, open **Yardage & ball flight**. Choose U.S. Open, Blue or White tees to update the official scorecard yardage and par. Select an illustrative carry, replay the shot, or toggle yardage markers and the ball-flight line. The ball follows the hole’s scroll progress; replay animates independently while the camera is held. Reduced-motion mode shows the landing frame.
+
+The carry/remaining arithmetic uses the selected tee’s hole length. Yardage marker placement and shot geometry over the footage are illustrative screen projections, not measured terrain, real shot tracking, hazard carries or advice for choosing a club. Source: Pinehurst’s official scorecard at https://www.pinehurst.com/golf/courses/no-2/ . UX reference: https://coursepreview.golf/bandondunes/?hole=3 ; no reference source code, graphics or footage were reused.
+
+Direct links support `?view=journey&hole=3`, plus overview, groups, player, rewards and about views. In-app navigation works with browser Back. Unit and control-handler tests cover tee changes, carry updates, layer toggles and replay; actual browser click-through remains unverified because the managed desktop JavaScript tool is unavailable.
