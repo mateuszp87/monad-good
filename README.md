@@ -1,5 +1,7 @@
 # Fairway Flow
 
+The current front page is **Bandon Dunes**, using a CoursePreview-style split hole map / scroll flyover, six tee sets, pointer yardages, hole selection, scorecard, handicap chart, map and course tabs. Open `/?hole=3` to start at the requested reference hole. Fairway Flow product tools and MetaMask rewards are at `/dashboard.html?view=rewards`. The earlier Pinehurst work is retained in source/history.
+
 A golf course traffic and pace-of-play prototype for Monad Good.
 
 ## Run

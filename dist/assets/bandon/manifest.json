@@ -1,0 +1,218 @@
+[
+  {
+    "hole": 1,
+    "sourceFrameCount": 108,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 1977239
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 531913
+    }
+  },
+  {
+    "hole": 2,
+    "sourceFrameCount": 69,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2763463
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 800155
+    }
+  },
+  {
+    "hole": 3,
+    "sourceFrameCount": 73,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 3106296
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 855738
+    }
+  },
+  {
+    "hole": 4,
+    "sourceFrameCount": 131,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2514806
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 682008
+    }
+  },
+  {
+    "hole": 5,
+    "sourceFrameCount": 111,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2124775
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 536205
+    }
+  },
+  {
+    "hole": 6,
+    "sourceFrameCount": 69,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2144769
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 573754
+    }
+  },
+  {
+    "hole": 7,
+    "sourceFrameCount": 136,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2815120
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 736918
+    }
+  },
+  {
+    "hole": 8,
+    "sourceFrameCount": 107,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2174339
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 531890
+    }
+  },
+  {
+    "hole": 9,
+    "sourceFrameCount": 130,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2076381
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 556824
+    }
+  },
+  {
+    "hole": 10,
+    "sourceFrameCount": 93,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 1848951
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 494856
+    }
+  },
+  {
+    "hole": 11,
+    "sourceFrameCount": 78,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2212300
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 566950
+    }
+  },
+  {
+    "hole": 12,
+    "sourceFrameCount": 73,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2351049
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 618065
+    }
+  },
+  {
+    "hole": 13,
+    "sourceFrameCount": 135,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2263796
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 598008
+    }
+  },
+  {
+    "hole": 14,
+    "sourceFrameCount": 103,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2636254
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 716968
+    }
+  },
+  {
+    "hole": 15,
+    "sourceFrameCount": 73,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2527089
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 655251
+    }
+  },
+  {
+    "hole": 16,
+    "sourceFrameCount": 109,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2548063
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 664613
+    }
+  },
+  {
+    "hole": 17,
+    "sourceFrameCount": 97,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2378717
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 629791
+    }
+  },
+  {
+    "hole": 18,
+    "sourceFrameCount": 127,
+    "hd": {
+      "duration": 8.0,
+      "bytes": 2048918
+    },
+    "sd": {
+      "duration": 8.0,
+      "bytes": 540508
+    }
+  }
+]

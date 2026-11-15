@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {bandon} from '../dist/bandon-data.js';
+import {holeState,mapPoints,mapDistance,requestedHole,flightProgress} from '../dist/bandon-model.js';
+import {existsSync,readFileSync} from 'node:fs';
+test('Bandon replaces the front page while product tools remain linked',()=>{const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');assert.ok(html.includes('Bandon Dunes'));assert.ok(!html.includes('Pinehurst'));assert.ok(html.includes('bandon.js'));assert.ok(html.includes('dashboard.html?view=rewards'));});
+test('reference hole 3 and all six tees use Bandon scorecard facts',()=>{assert.equal(holeState(3).yards,489);assert.equal(holeState(3).par,5);assert.equal(holeState(3,6).yards,563);assert.equal(holeState(3,1).yards,318);for(let t=1;t<=6;t++)assert.equal(bandon.yardages[t].length,19);assert.equal(bandon.holePar.slice(1).reduce((a,b)=>a+b,0),72);});
+test('all eighteen hole maps, previews and flyovers exist',()=>{for(let h=1;h<=18;h++){const n=String(h).padStart(2,'0');for(const file of [`hole-${n}.svg`,`hole-${n}.jpg`,`flight-${n}.mp4`])assert.ok(existsSync(new URL(`../dist/assets/bandon/${file}`,import.meta.url)),file);}});
+test('map pointer distances use the selected tee and calibrated map scale',()=>{for(let h=1;h<=18;h++){const pts=mapPoints(h,4),d=mapDistance(h,4,pts.pin);assert.equal(d.toPin,0);assert.equal(d.fromTee,holeState(h,4).yards);assert.equal(mapDistance(h,4,pts.tee).fromTee,0);}assert.throws(()=>holeState(0),RangeError);});
+test('hole URLs, reverse scrolling and progress boundaries are handled',()=>{assert.equal(requestedHole('?hole=18'),18);assert.equal(requestedHole('?hole=3'),3);assert.equal(requestedHole('?hole=-1'),3);assert.equal(flightProgress(-20,5000,1000),0);assert.equal(flightProgress(2000,5000,1000),.5);assert.equal(flightProgress(9000,5000,1000),1);});
