@@ -1,0 +1,9 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {videoTime,createVideoScrubber} from '../dist/video-scrubber.js';
+function mockVideo(duration){const events={};let time=0;return {duration,readyState:2,seeking:false,events,get currentTime(){return time;},set currentTime(t){time=t;this.seeking=true;},addEventListener(n,fn){events[n]=fn;},removeEventListener(n){delete events[n];},complete(){this.seeking=false;events.seeked();}};}
+test('scroll end reaches the final frame for both old and longer Hole 1 clips',()=>{assert.equal(videoTime(1,8),8-1/24);assert.equal(videoTime(1,13),13-1/24);assert.equal(videoTime(-1,13),0);assert.equal(videoTime(1,NaN),0);});
+test('a fast scroll to the bottom is applied after an in-flight seek finishes',()=>{const video=mockVideo(13),s=createVideoScrubber(video);s.setProgress(.4);assert.equal(video.seeking,true);s.setProgress(1);assert.ok(video.currentTime<6);video.complete();assert.equal(video.currentTime,13-1/24);video.complete();assert.equal(video.seeking,false);});
+test('the newest position wins when a user reverses before decoding finishes',()=>{const video=mockVideo(13),s=createVideoScrubber(video);s.setProgress(.8);s.setProgress(1);s.setProgress(.2);video.complete();assert.equal(video.currentTime,videoTime(.2,13));});
+test('metadata arriving after scrolling uses the real duration and current progress',()=>{const video=mockVideo(NaN);video.readyState=0;const s=createVideoScrubber(video);s.setProgress(1);assert.equal(video.currentTime,0);video.duration=13;video.readyState=1;video.events.loadedmetadata();assert.equal(video.currentTime,13-1/24);});
+test('reset discards a previous hole’s pending position',()=>{const video=mockVideo(8),s=createVideoScrubber(video);s.setProgress(1);s.reset();video.duration=13;video.complete();assert.equal(video.currentTime,0);s.destroy();assert.deepEqual(video.events,{});});

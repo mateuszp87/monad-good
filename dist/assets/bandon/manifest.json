@@ -3,13 +3,14 @@
     "hole": 1,
     "sourceFrameCount": 108,
     "hd": {
-      "duration": 8.0,
-      "bytes": 1977239
+      "duration": 13.0,
+      "bytes": 3257519
     },
     "sd": {
-      "duration": 8.0,
-      "bytes": 531913
-    }
+      "duration": 13.0,
+      "bytes": 865072
+    },
+    "finalFrameHoldSeconds": 1
   },
   {
     "hole": 2,
