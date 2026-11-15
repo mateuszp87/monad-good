@@ -23,7 +23,7 @@ Open http://localhost:8000. Use `npm test` for ETA tests and `npm run check` for
 - Browser-local persistence and reset. No data is shared between devices yet.
 - Monad rewards integration preview, clearly marked as not connected.
 
-All course names, weather, staff profiles, groups, positions, and tee times are sample data. Simulation starts at 11:30; it is not a live clock. The map is schematic, not GPS.
+Pinehurst No. 2 course facts and hole previews are sourced in SOURCES.md. Weather, staff profiles, groups, positions, and tee times are sample data. Simulation starts at 11:30; it is not a live clock. The map is schematic, not GPS.
 
 ## ETA model
 
@@ -38,3 +38,11 @@ All course names, weather, staff profiles, groups, positions, and tee times are 
 5. Monad testnet: wallet connection, course attestation service, and a reviewed badge contract. Keep location and personal data off-chain. Prevent replay and duplicate claims; do not reward unverified phone check-ins.
 
 The current app sends no messages, requests no GPS permissions and performs no blockchain transactions. Never commit private keys or service credentials.
+
+## Pinehurst No. 2 demo
+
+The opening course journey now uses all 18 holes of Pinehurst No. 2, U.S. Open scorecard data and hole-specific aerial previews. Enable drone footage to load the source YouTube player; scrolling seeks through the corresponding hole's segment. Pause scroll sync to use normal playback. A jump selector and previous/next controls navigate all holes. Reduced-motion preferences disable smooth jumps and progressive video scrubbing.
+
+Group position diagrams show simulated progress from tee to green, the number of golfers and pace for each group. Select a group marker for round details. The diagrams are explicitly not GPS overlays on the footage. All course targets remain illustrative.
+
+See SOURCES.md for attribution, timing provenance and media limitations. YouTube autoplay, embedding and exact scene matching need browser verification; local data/model tests do not establish playback availability. If video loading fails, each hole retains its own static preview and a direct source-video link.

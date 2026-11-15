@@ -25,7 +25,7 @@ test('every journey chapter has a unique anchor, target, and traffic control',()
  const html=journeyMarkup(seed[5],seed);
  for(let h=1;h<=18;h++){
  assert.equal(html.split(`id="journey-hole-${h}"`).length-1,1);
- assert.ok(html.includes(`data-map-hole="${h}"`));assert.ok(html.includes(`data-hole="${h}"`));
+ assert.ok(html.includes(`data-chapter="${h}"`));assert.ok(html.includes(`data-hole="${h}"`));
  }
  assert.equal(html.split('class="chapter-eta"').length-1,18);
 });
