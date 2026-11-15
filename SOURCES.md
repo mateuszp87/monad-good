@@ -71,5 +71,15 @@ Starting a round runs an accelerated simulation. Individual Leaflet markers upda
 
 DOM integration tests exercise start, playback, hole browsing, pause and reset while asserting the map host and marker instances remain stable. These are tests with a mocked map engine, not visual browser verification. Real-device GPS and rendering remain field-test requirements.
 
+## Four-course geographic traffic reset
+
+The primary traffic interface now loads per-course records through course-registry.js. The four demo records are Bandon Dunes, Pinehurst No. 2, Pebble Beach Golf Links, and TPC Sawgrass Stadium Course. Each has 18 independently sourced OpenStreetMap hole-route polylines and surrounding mapped terrain. Search changes course data and geography in the same persistent interface. The selected course ID is shareable in the URL. No open-ended global course database is claimed.
+
+Source: OpenStreetMap API map extracts, https://api.openstreetmap.org/api/0.6/map, with per-hole way URLs retained in dist/data/*.json. All derived geographic datasets are made available under ODbL 1.0; attribution to OpenStreetMap contributors is displayed on the map. See https://www.openstreetmap.org/copyright. The downloaded data replaces the atlas grid as the primary map. Community mapping can be incomplete or outdated and has not been surveyed or field-verified by this project.
+
+Course map terrain is rendered locally from mapped polygons; it is not satellite imagery. Simulated groups interpolate along the selected course's mapped hole routes. Positions are synthetic, not actual people or measured GPS. Routes represent hole centerlines, not verified playable-area geofences. The separate street-map view uses OSM tiles and optional browser-only device GPS. Shared golfer locations and staff feeds remain unconnected.
+
+The flyover tab uses the selected course's existing project media only. Bandon and Pinehurst have footage. Pebble Beach and Sawgrass show an explicit no-footage state rather than borrowed visuals. Flyover group labels are approximate demo screen projections; they are not geographically calibrated or tracked within the video. All original media licensing caveats still apply.
+
 
 Hole 1 update: its complete available 108-frame sequence is now encoded over twelve seconds with a one-second hold on the green (13 seconds total) in both HD and SD. Other Bandon clips remain unchanged. The native scrubber uses each file’s actual duration and applies the latest requested position after a pending seek completes, including a fast scroll to the end.

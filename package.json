@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check dist/app.js && node --check dist/pace.js && node --check dist/journey.js && node --check dist/pinehurst.js && node --check dist/about.js && node --check dist/wallet.js && node --check dist/round-demo.js && node --check dist/round-map.js && node --check dist/shots.js && node --check dist/bandon.js && node --check dist/bandon-model.js && node --check dist/round-experience.js && node --check dist/round-experience-model.js && node --check dist/course-map.js && node --check dist/play.js && node --check dist/play-model.js && node --check dist/video-scrubber.js"
+    "check": "node --check dist/app.js && node --check dist/pace.js && node --check dist/journey.js && node --check dist/pinehurst.js && node --check dist/about.js && node --check dist/wallet.js && node --check dist/round-demo.js && node --check dist/round-map.js && node --check dist/shots.js && node --check dist/bandon.js && node --check dist/bandon-model.js && node --check dist/round-experience.js && node --check dist/round-experience-model.js && node --check dist/course-map.js && node --check dist/play.js && node --check dist/play-model.js && node --check dist/course-registry.js && node --check dist/video-scrubber.js"
   },
   "devDependencies": {
     "linkedom": "^0.18.15"

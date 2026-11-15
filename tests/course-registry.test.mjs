@@ -1,0 +1,6 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {courses,routePosition} from '../dist/course-registry.js';
+test('all four searchable courses provide independent 18-hole geographic datasets',()=>{assert.equal(courses.length,4);const starts=[];for(const c of courses){const data=JSON.parse(readFileSync(new URL(`../dist/data/${c.id}.json`,import.meta.url)));assert.equal(data.id,c.id);assert.deepEqual(data.holes.map(h=>h.hole),Array.from({length:18},(_,i)=>i+1));assert.ok(data.terrain.length>0);for(const h of data.holes){assert.match(h.source,/openstreetmap.org\/way\/\d+/);assert.ok(h.route.length>=2);assert.ok(h.route.every(p=>p.every(Number.isFinite)));assert.deepEqual(routePosition(h.route,0),h.route[0]);const end=routePosition(h.route,1),expected=h.route.at(-1);assert.ok(Math.abs(end[0]-expected[0])<1e-9&&Math.abs(end[1]-expected[1])<1e-9);}starts.push(data.holes[0].route[0].join(','));}assert.equal(new Set(starts).size,4);});
+test('route interpolation is bounded and follows the route bend',()=>{const route=[[0,0],[0,1],[1,1]];assert.deepEqual(routePosition(route,-1),[0,0]);assert.deepEqual(routePosition(route,.5),[0,1]);assert.deepEqual(routePosition(route,2),[1,1]);});
