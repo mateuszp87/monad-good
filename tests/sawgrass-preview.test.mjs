@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {existsSync,readFileSync} from 'node:fs';
+import {getPreviewCourse} from '../dist/preview-courses.js';
+import {holeState,mapPoints,mapDistance} from '../dist/bandon-model.js';
+import {courses} from '../dist/course-registry.js';
+test('Sawgrass is available in shared preview and main traffic view',()=>{assert.equal(getPreviewCourse('sawgrass').name,'TPC Sawgrass · Stadium Course');assert.equal(courses.find(c=>c.id==='sawgrass').media,true);assert.equal(getPreviewCourse('sawgrass').teeNames.length,6);});
+test('Sawgrass uses its own six official scorecard tee sets',()=>{const d=getPreviewCourse('sawgrass').data;assert.deepEqual(d.courseYardage,[7352,6670,6396,6086,5509,5019]);assert.equal(holeState(17,1,'sawgrass').yards,141);assert.equal(holeState(18,1,'sawgrass').yards,462);assert.equal(d.holePar.slice(1).reduce((a,b)=>a+b,0),72);});
+test('all Sawgrass holes have independent HD, SD, poster and map files',()=>{for(let h=1;h<=18;h++){const n=String(h).padStart(2,'0');for(const file of [`flight-${n}.mp4`,`flight-${n}-sd.mp4`,`flight-${n}.jpg`,`hole-${n}.svg`])assert.ok(existsSync(new URL(`../dist/assets/sawgrass/${file}`,import.meta.url)),file);const p=mapPoints(h,1,'sawgrass');assert.equal(mapDistance(h,1,p.pin,'sawgrass').fromTee,holeState(h,1,'sawgrass').yards);}});
+test('source cuts cover all 18 holes, in order, with a final frame hold',()=>{const manifest=JSON.parse(readFileSync(new URL('../dist/assets/sawgrass/manifest.json',import.meta.url)));assert.equal(manifest.length,18);for(let i=0;i<18;i++){const m=manifest[i];assert.equal(m.hole,i+1);assert.ok(m.sourceEnd>m.sourceStart);assert.ok(m.hd.duration>=7.9&&m.hd.duration<=8.1);assert.equal(m.finalHoldSeconds,.5);if(i)assert.ok(m.sourceStart>=manifest[i-1].sourceEnd);}});

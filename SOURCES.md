@@ -114,3 +114,9 @@ User-supplied footage: https://www.youtube.com/watch?v=6YrmRSEqOTo . The source 
 Hole boundaries were checked against the captions, visual scene changes and the video’s numbered hole title graphics. The 16–18 overview montage between holes 15 and 16 is skipped. Each complete hole segment is retimed to 7.5 seconds, followed by a half-second final-frame hold, with native HD/SD seeking and no audio. `dist/assets/pebble/manifest.json` records the source intervals and encoded file metadata. The full source video is not committed.
 
 Five tee sets, pars and men’s handicaps come from Pebble Beach’s linked official scorecard: https://www.pebblebeach.com/content/uploads/PebbleBeach-Scorecard.pdf (2024 document) via https://www.pebblebeach.com/golf/pebble-beach-golf-links/ . These are Blue/Gold/White/Green/Red resort tees, with par 72, not a championship par-71 setup. Hole maps are generated from the existing OpenStreetMap route/terrain data in `dist/data/pebble.json` (OpenStreetMap contributors, https://www.openstreetmap.org/copyright). Shorter-tee locations and pointer measurements are illustrative, as for Pinehurst. The shared viewer uses Fairway Flow’s own approved logo for this course.
+
+## TPC Sawgrass Stadium Course flyovers
+
+Requested video: https://www.youtube.com/watch?v=GgOb7N7pY80 . Matching publisher: https://www.golfdigest.com/video/every-hole-at/every-hole-at-tpc-sawgrass . All 18 hole segments are retimed into scrollable HD/SD clips with a final-frame hold; source intervals are recorded in `dist/assets/sawgrass/manifest.json`. Original footage title cards reflect its recording date.
+
+Selected tee yardages use the Stadium Course page of the official 2025 scorecard: https://tpc.com/sawgrass/wp-content/uploads/sites/51/2025/01/TPC_Sawgrass-Scorecard.pdf . Six tee sets, par 72. Maps use existing OpenStreetMap course routes and terrain; shorter-tee anchors and distance tools are illustrative rather than surveyed GPS measurements.

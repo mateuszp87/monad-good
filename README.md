@@ -94,3 +94,5 @@ Pinehurst has eighteen independent maps and flyovers and seven official tee sets
 ## Pebble Beach
 
 Pebble Beach Golf Links now has its own 18 hole flyovers in HD/SD, poster frames, geographic hole maps, and five scorecard tee sets in the shared preview. Open `/course-preview.html?course=pebble&hole=1`, choose it in the preview’s Courses menu, or select it in the main course search and open Flyover. See SOURCES.md and the Pebble media manifest for the supplied video, source intervals, scorecard and map provenance. No live GPS or real ball tracking is inferred from the footage.
+
+TPC Sawgrass now supports all 18 HD/SD flyovers in the shared walkthrough at `course-preview.html?course=sawgrass&hole=1`, with six official Stadium Course tee sets, course-specific maps, and the existing pace overlay.
