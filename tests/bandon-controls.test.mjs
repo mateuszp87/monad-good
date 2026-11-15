@@ -19,6 +19,9 @@ test('Bandon controls change holes, tees, menu tabs, quality and full view',asyn
  click('',{hole:'7'});assert.equal(node('#hole-number').textContent,7);assert.equal(node('#course-menu').hidden,true);assert.ok(currentUrl.search.includes('hole=7'));
  click('next-hole');assert.equal(node('#hole-number').textContent,8);click('previous-hole');assert.equal(node('#hole-number').textContent,7);
  click('',{quality:'sd'});assert.ok(node('#flight-video').src.endsWith('flight-07-sd.mp4'));
+ click('',{course:'pinehurst'});assert.equal(node('#hole-number').textContent,1);assert.ok(node('#description-meta').textContent.includes('402 YARDS'));assert.ok(node('#map-art').href.includes('assets/pinehurst/hole-01.svg'));assert.ok(node('#flight-video').src.includes('assets/pinehurst/flight-01-sd.mp4'));assert.ok(currentUrl.search.includes('course=pinehurst'));
+ click('',{tee:'7'});assert.ok(node('#description-meta').textContent.includes('340 YARDS'));click('',{hole:'8'});assert.ok(node('#description-meta').textContent.includes('PAR 5'));click('',{tee:'1'});assert.ok(node('#description-meta').textContent.includes('PAR 4'));
+ click('',{course:'bandon'});assert.ok(node('#description-meta').textContent.includes('352 YARDS'));assert.ok(node('#map-art').href.includes('assets/bandon/hole-01.svg'));
  click('settings-button');assert.equal(node('#settings-panel').hidden,false);click('full-view');assert.ok(classes.has('full-view'));
  }finally{for(const k of keys){if(saved[k]===undefined)delete globalThis[k];else globalThis[k]=saved[k];}}
 });

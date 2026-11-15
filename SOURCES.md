@@ -83,3 +83,9 @@ The flyover tab uses the selected course's existing project media only. Bandon a
 
 
 Hole 1 update: its complete available 108-frame sequence is now encoded over twelve seconds with a one-second hold on the green (13 seconds total) in both HD and SD. Other Bandon clips remain unchanged. The native scrubber uses each file’s actual duration and applies the latest requested position after a pending seek completes, including a fast scroll to the end.
+
+## Pinehurst in the shared course-preview interface
+
+Pinehurst No. 2 and Bandon Dunes now use the same `course-preview.html`, controller and stylesheet. Pinehurst uses its existing Golf Digest-derived local flyovers, plus SD versions, the course emblem from `https://tours.skyfoxgolf.com/storage/logos/pinehurst_no2_logo.png`, and seven tee sets from the official scorecard: https://www.pinehurst.com/golf/courses/no-2/ . Par and handicap change with the selected tee set where appropriate.
+
+Its eighteen SVG hole maps are generated from the OpenStreetMap hole routes and terrain in `dist/data/pinehurst.json` (OpenStreetMap contributors, https://www.openstreetmap.org/copyright). Geometry is rotated into the same 450×800 map frame used by the Bandon viewer. Course data is community mapping, not a surveyed yardage book. Shorter-tee anchors are indicative points along the route based on relative hole lengths, not measured tee locations. Pointer distances remain illustrative map estimates. All source media rights remain with their owners; no affiliation is claimed.

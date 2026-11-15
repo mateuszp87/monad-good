@@ -84,3 +84,9 @@ Direct links support `?view=journey&hole=3`, plus overview, groups, player, rewa
 ## Current traffic demo
 
 The shared interface uses `dist/course-registry.js` and `dist/data/{bandon,pinehurst,pebble,sawgrass}.json`. Search one of the four supported courses to change its 18 hole routes, terrain and media availability. The map is rendered from community OpenStreetMap data, with local per-course JSON and in-place group updates. This is a visual traffic simulation, not deployed shared GPS tracking. Flyover labels are approximate projections. Course geometry and device behavior require field validation before operational use. Geographic data is ODbL; see SOURCES.md.
+
+## Shared Pinehurst / Bandon preview
+
+Open `/course-preview.html?course=pinehurst&hole=1` for Pinehurst No. 2 or `/course-preview.html?course=bandon&hole=1` for Bandon. The same UI provides hole selection, scroll scrubbing, SD/HD, full view, tee markers, yardage estimates, scorecard, handicap chart and geographic overview. Use the Courses tab to switch without changing the layout. The main course traffic map’s Flyover link preserves the selected course and hole.
+
+Pinehurst has eighteen independent maps and flyovers and seven official tee sets. The generated maps use existing OpenStreetMap geometry; tee placement and map pointer distances are approximate. Browser visual comparison remains unverified in this environment.
