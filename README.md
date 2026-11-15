@@ -54,3 +54,7 @@ python3 scripts/prepare-flight.py --source /path/to/source.mp4
 ```
 
 Local tests verify scroll mapping, forward/reverse navigation calculations, ETA state and media coverage. Packaged videos were checked with FFprobe for duration, codec, frame count, no audio and keyframe spacing. Browser rendering and device scrubbing performance remain unverified in this environment.
+
+## Brand
+
+The approved Fairway Flow logo is the three-golfer fairway-F design. Both the dashboard and immersive flight use `dist/assets/brand/fairway-flow-logo.png`. See BRAND.md for future updates.

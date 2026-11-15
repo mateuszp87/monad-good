@@ -14,3 +14,7 @@ body:has(.journey-intro){background:#f5f4ec}.journey-intro{display:flex;align-it
 @media(max-height:650px) and (min-width:761px){.pine-visual{top:10px}.drone-top{padding:10px 15px}.drone-cue{padding:12px 16px}.drone-cue h3{font-size:21px}.drone-help{display:none}.drone-nav{padding:9px 16px}.pine-legend{padding:10px 0}}
 @media(prefers-reduced-motion:reduce){.drone-media>img{transition:none}.golf-group-pin{animation:none}}
 .hole-traffic-link{border:0;background:none;color:#7f9667;padding:0;font-size:12px}.position-label{align-items:center}.position-label small{margin-left:auto}
+/* Approved Fairway Flow identity: three walking golfers over the fairway F. */
+.brand .brand-logo{display:block;width:180px;max-width:100%;height:auto;object-fit:contain}.sidebar .brand{display:block;letter-spacing:normal}
+@media(max-width:1200px){.brand .brand-logo{width:170px}}
+@media(max-width:680px){.brand .brand-logo{width:125px}.sidebar .brand{width:max-content}}

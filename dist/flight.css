@@ -7,3 +7,8 @@ body.flight-mode{background:#172b23;color:#f5f4e7}.flight-mode .sidebar,.flight-
 @media(max-height:720px) and (max-width:680px){.flight-stage{min-height:540px}.flight-hud{bottom:128px}.flight-panel{gap:9px}.flight-hole-number{font-size:47px}.flight-hole-title h2{font-size:22px}.flight-hole-title p{display:none}.flight-on-course{padding:8px 10px}.flight-group-row small{display:none}.flight-group-row{padding:6px 0}.flight-stats strong{font-size:20px}.flight-round-bar{top:85px}.flight-camera-tag{top:90px}.flight-pin-stem{height:12px}}
 @media(prefers-reduced-motion:reduce){.flight-video{transition:none}.flight-mode *{scroll-behavior:auto}}
 @media(max-width:680px){.flight-pins{top:70px;bottom:40%}}
+/* Cream backing preserves the approved green artwork over moving footage. */
+.flight-brand{display:block;background:#fbf7ed;border-radius:8px;padding:7px 12px;border:1px solid #fff9e933;line-height:0;flex-shrink:0}.flight-brand img{display:block;width:128px;height:auto;object-fit:contain}.flight-topbar{padding-top:16px;padding-bottom:16px}
+@media(min-width:1600px){.flight-brand img{width:145px}.flight-topbar{padding-top:18px;padding-bottom:18px}}
+@media(max-width:1000px){.flight-brand img{width:105px}.flight-brand{padding:6px 9px}.flight-topbar{padding-top:13px;padding-bottom:13px}}
+@media(max-width:680px){.flight-brand img{width:87px}.flight-brand{padding:5px 8px;border-radius:6px}.flight-topbar{padding-top:12px;padding-bottom:12px}.flight-round-bar{top:101px}.flight-camera-tag{top:104px}}
