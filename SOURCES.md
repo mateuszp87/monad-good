@@ -139,3 +139,9 @@ The About hero is an explicitly labelled product illustration using an existing 
 Group markers now display tee times instead of arbitrary group numbers. Selecting a group shows its demo location stage, activity, pace and neighboring tee-time groups. The list can show the selected hole or the whole course. No golfer names are collected or displayed. Tee times remain potentially identifying to people nearby; production audience policy is still a pilot decision.
 
 The new group-context module keeps location, activity and pace as separate labels. All activity classifications are scripted demo states, not GPS geofence results. Groups with later tee times remain scheduled until departure; scheduled markers are hidden from the playing map. Queue, gap and stale-data guidance have separate wording. Stale positions do not produce a pace warning; waiting groups receive no catch-up instruction. Real detection, staff escalation and shared phone tracking are not connected by this change.
+
+## Phone readability pass
+
+Tee-time map markers are now 78×46 CSS pixels with 16px primary text; the selected marker adds a short hole/stage label. Nonselected markers keep only the tee time to limit map clutter. Group rows, activity descriptions, status chips and location fields have larger type and darker text.
+
+On phone-width screens the group panel is a fixed, scrollable bottom sheet above mobile navigation. Tapping a map marker or group row opens it and returns its scroll position to the selected-group card, which has moved immediately below the sticky close handle. The collapsed handle identifies the selected tee time and pace state. Selected markers are raised above other marker layers. Interaction tests verify marker labels, marker-tap expansion, selected card identity and map reuse. Physical-device rendering has not been visually verified in this environment.
