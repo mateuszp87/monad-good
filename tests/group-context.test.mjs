@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {groupsAt} from '../dist/play-model.js';
+import {teeTime,describeGroup,paceGuidance} from '../dist/group-context.js';
+test('anonymous groups are identified by tee time, without golfer names',()=>{assert.equal(teeTime(8),'08:30');assert.equal(teeTime(7),'08:20');const groups=groupsAt(0),c=describeGroup(groups.find(g=>g.id===8),groups,0);assert.equal(c.label,'08:30 tee-time group');assert.equal(c.ahead.id,7);assert.equal(c.behind.id,9);assert.equal(c.source,'Demo activity · not GPS zone detection');});
+test('groups with a later tee time remain at the first tee until departure',()=>{for(const target of [245,250,255,260]){const before=groupsAt(9,'normal',target).find(g=>g.id===9),after=groupsAt(15,'normal',target).find(g=>g.id===9);assert.equal(before.progress,.02);assert.ok(after.progress>before.progress);const c=describeGroup(before,groupsAt(9),9,'normal',target);assert.equal(c.kind,'scheduled');assert.equal(c.activity,'Waiting for tee time');}});
+test('queues, gaps and missing observations produce distinct group-specific guidance',()=>{const waiting=paceGuidance(groupsAt(20,'queue'),20,'queue');assert.equal(waiting.state,'queue');assert.match(waiting.message,/08:30/);assert.match(waiting.action,/No catch-up/);const gap=paceGuidance(groupsAt(20,'gap'),20,'gap');assert.match(gap.title,/hole/);assert.match(gap.message,/08:20/);const stale=paceGuidance(groupsAt(20,'stale'),20,'stale');assert.equal(stale.state,'stale');assert.match(stale.action,/No pace warning/);});

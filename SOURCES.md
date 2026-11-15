@@ -133,3 +133,9 @@ Vector detail mode permits zoom to level 19; aerial mode retains its 16.75 cap a
 The new about.html is a standalone, mobile-friendly overview linked from the active app. The legacy dashboard About view reuses the same aboutMarkup. It describes the intended tee-time group/member model, individual location opt-in, a representative group focus, course/team benefits, and golfer-first escalation. It clearly distinguishes current simulation/browser-only GPS from planned verified membership, shared GPS, zone detection, calibrated finish estimates, staff operations and remote push.
 
 The About hero is an explicitly labelled product illustration using an existing Bandon photograph, not a screenshot of a connected round or a new media acquisition. Existing media rights limitations apply. The interactive four-step walkthrough has accessible pressed states and invalid-index handling. Product outcomes are presented as pilot hypotheses, not proven guarantees.
+
+## Anonymous tee-time group context
+
+Group markers now display tee times instead of arbitrary group numbers. Selecting a group shows its demo location stage, activity, pace and neighboring tee-time groups. The list can show the selected hole or the whole course. No golfer names are collected or displayed. Tee times remain potentially identifying to people nearby; production audience policy is still a pilot decision.
+
+The new group-context module keeps location, activity and pace as separate labels. All activity classifications are scripted demo states, not GPS geofence results. Groups with later tee times remain scheduled until departure; scheduled markers are hidden from the playing map. Queue, gap and stale-data guidance have separate wording. Stale positions do not produce a pace warning; waiting groups receive no catch-up instruction. Real detection, staff escalation and shared phone tracking are not connected by this change.
