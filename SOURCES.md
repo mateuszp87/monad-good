@@ -60,3 +60,13 @@ The new round-demo screen uses the latest existing Bandon assets and Pinehurst m
 The whole-course view initializes a single Leaflet map and never attaches synthetic group coordinates to real terrain. It shows approximate course-area centers and optional actual device GPS with accuracy and freshness. No hole polygons are claimed. Demo group progress remains in a separate relative-progress panel, not projected onto uncalibrated images. Other courses have geographic previews but no invented hole media or scorecard facts. No shared GPS backend, actual rewards, or remote notifications are connected in this static release.
 
 Leaflet 1.9.4 JS/CSS are vendored under dist/vendor with their BSD license, avoiding a runtime CDN dependency for the map library. OpenStreetMap tiles and attribution remain external, subject to the community tile usage policy. The map persists through hole changes, simulation ticks, scenario selection, and view switches. Live shared tracking and geographically accurate hole transitions remain a separate field-test milestone.
+
+## Map-first round simulation
+
+The primary index and round-demo routes now use play.js and play.css. The original Bandon scroll flyover is preserved at course-preview.html; the prior round explorer is preserved at round-review.html.
+
+The primary demo is an interactive atlas of existing Bandon hole SVG artwork. Hole panels are arranged in a browsing grid, NOT in their actual geographic relationship. Demo groups move between tee and green positions supplied by the existing bandon-model, using illustrative straight-line interpolation. Their positions are not measured or geographically calibrated. Labels distinguish the illustrated atlas from the separate OpenStreetMap/device-GPS view. Course artwork provenance and production-rights caveats remain unchanged.
+
+Starting a round runs an accelerated simulation. Individual Leaflet markers update in place; the map container and group markers are retained. Users can select groups, follow their own group across holes, browse the atlas, pause, scrub time, change speed, and explore traffic scenarios. Automatic mode introduces and clears a sample queue. Alerts, finish times, and rewards are scenario outputs, not validated predictions or real payments. Actual shared golfer tracking is not deployed.
+
+DOM integration tests exercise start, playback, hole browsing, pause and reset while asserting the map host and marker instances remain stable. These are tests with a mocked map engine, not visual browser verification. Real-device GPS and rendering remain field-test requirements.
