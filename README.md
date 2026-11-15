@@ -58,3 +58,7 @@ Local tests verify scroll mapping, forward/reverse navigation calculations, ETA 
 ## Brand
 
 The approved Fairway Flow logo is the three-golfer fairway-F design. Both the dashboard and immersive flight use `dist/assets/brand/fairway-flow-logo.png`. See BRAND.md for future updates.
+
+## How it works
+
+Use the How it works navigation link from the flight or sidebar, or continue below the course walkthrough for an introduction. The separate guide explains the product’s purpose, the golfer and course-team experience, a four-step interactive walkthrough, and the distinction between the current simulation and planned shared tracking/Monad features. Each step links to the matching app view.
