@@ -80,3 +80,7 @@ In the course view, open **Yardage & ball flight**. Choose U.S. Open, Blue or Wh
 The carry/remaining arithmetic uses the selected tee’s hole length. Yardage marker placement and shot geometry over the footage are illustrative screen projections, not measured terrain, real shot tracking, hazard carries or advice for choosing a club. Source: Pinehurst’s official scorecard at https://www.pinehurst.com/golf/courses/no-2/ . UX reference: https://coursepreview.golf/bandondunes/?hole=3 ; no reference source code, graphics or footage were reused.
 
 Direct links support `?view=journey&hole=3`, plus overview, groups, player, rewards and about views. In-app navigation works with browser Back. Unit and control-handler tests cover tee changes, carry updates, layer toggles and replay; actual browser click-through remains unverified because the managed desktop JavaScript tool is unavailable.
+
+## Current traffic demo
+
+The shared interface uses `dist/course-registry.js` and `dist/data/{bandon,pinehurst,pebble,sawgrass}.json`. Search one of the four supported courses to change its 18 hole routes, terrain and media availability. The map is rendered from community OpenStreetMap data, with local per-course JSON and in-place group updates. This is a visual traffic simulation, not deployed shared GPS tracking. Flyover labels are approximate projections. Course geometry and device behavior require field validation before operational use. Geographic data is ODbL; see SOURCES.md.
