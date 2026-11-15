@@ -84,6 +84,15 @@ The flyover tab uses the selected course's existing project media only. Bandon a
 
 Hole 1 update: its complete available 108-frame sequence is now encoded over twelve seconds with a one-second hold on the green (13 seconds total) in both HD and SD. Other Bandon clips remain unchanged. The native scrubber uses each file’s actual duration and applies the latest requested position after a pending seek completes, including a fast scroll to the end.
 
+## Aerial basemap and brand correction
+
+The main course traffic map now uses USGS The National Map Imagery Only tiles, with attribution to USDA / USGS. Service: https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer . Official terms: https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map . USGS states that The National Map services and downloaded data are free and public domain. No Google/Esri account key is used. Requests for a level-16 tile at each of the four course centers returned HTTP 200 image/jpeg during setup. Higher advertised levels did not return cached tiles in these checks, so Leaflet uses maxNativeZoom 16 and scales those tiles at closer zooms.
+
+Imagery is historical photography, not live imagery; dates and resolution vary. It does not establish current course conditions or surveyed accuracy, and hosted tile availability is outside this app's control. Course detail toggles to the local OSM-derived terrain fallback. Simulated group positions continue to interpolate along community-mapped hole routes and are not live golfer feeds. Existing optional device GPS remains browser-only.
+
+The full approved three-golfer logo is restored using assets/brand/fairway-flow-logo.png. The introductory map card is removed; round start, status and settings are integrated into the sidebar (with a compact start button on mobile). Notifications are inline, not popup overlays. Existing flyover changes and video-scrubber fixes from the latest source are preserved.
+
+
 ## Pinehurst in the shared course-preview interface
 
 Pinehurst No. 2 and Bandon Dunes now use the same `course-preview.html`, controller and stylesheet. Pinehurst uses its existing Golf Digest-derived local flyovers, plus SD versions, the course emblem from `https://tours.skyfoxgolf.com/storage/logos/pinehurst_no2_logo.png`, and seven tee sets from the official scorecard: https://www.pinehurst.com/golf/courses/no-2/ . Par and handicap change with the selected tee set where appropriate.
