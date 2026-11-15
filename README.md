@@ -35,7 +35,7 @@ Pinehurst No. 2 course facts and hole previews are sourced in SOURCES.md. Weathe
 2. A shared backend for tee sheets, groups, hole check-ins and staff audit events.
 3. Consented GPS tracking or QR check-ins, retention controls and offline handling.
 4. ETA calibration against real course rounds and bottleneck measurements.
-5. Monad testnet: wallet connection, course attestation service, and a reviewed badge contract. Keep location and personal data off-chain. Prevent replay and duplicate claims; do not reward unverified phone check-ins.
+5. Monad testnet: course attestation service and a reviewed badge contract (MetaMask connection is implemented). Keep location and personal data off-chain. Prevent replay and duplicate claims; do not reward unverified phone check-ins.
 
 The current app sends no messages, requests no GPS permissions and performs no blockchain transactions. Never commit private keys or service credentials.
 
@@ -62,3 +62,11 @@ The approved Fairway Flow logo is the three-golfer fairway-F design. Both the da
 ## How it works
 
 Use the How it works navigation link from the flight or sidebar, or continue below the course walkthrough for an introduction. The separate guide explains the product’s purpose, the golfer and course-team experience, a four-step interactive walkthrough, and the distinction between the current simulation and planned shared tracking/Monad features. Each step links to the matching app view.
+
+## MetaMask / Monad Testnet
+
+Open `/?view=rewards` and click **Connect MetaMask + Monad Testnet** in a browser with MetaMask installed, or use MetaMask’s mobile browser. Approve the account connection and network addition/switch in the wallet. The app uses injected EIP-1193 providers and EIP-6963 discovery, verifies chain ID 10143 (`0x279f`), and reads the public account and MON balance. It handles account/network changes, rejected or pending requests, balance refresh and disconnect/revocation.
+
+Only account access, network management and read operations are used. No signing, asset approvals, transfers, contract deployment or badge minting is implemented. Wallet addresses are kept in session memory, not stored in browser persistence. Wallet connection is not a verified login. Badges still need a contract and course attestation backend.
+
+Official configuration: https://docs.monad.xyz/developer-essentials/testnet and https://docs.monad.xyz/guides/add-monad-to-wallet/testnet . RPC: https://testnet-rpc.monad.xyz ; explorer: https://testnet.monadvision.com ; faucet: https://faucet.monad.xyz . Public endpoints may be rate limited. Provider tests use mocks; actual MetaMask approval and end-to-end network access must be completed in the user’s browser.
