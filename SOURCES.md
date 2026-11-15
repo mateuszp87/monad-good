@@ -52,3 +52,11 @@ Assets are from `https://coursepreview.golf/bandondunes/holemaps/{hole}k.svg`, `
 Some public sequences have fewer available consecutive frames than the page’s listed frame counts. The build uses the available consecutive range starting at frame zero. `dist/assets/bandon/manifest.json` records available source frame counts and encoded media metadata. The original Pinehurst experience remains in source/history but is no longer the front page.
 
 The UI is an independent Fairway Flow demonstration with source attribution, not an official Bandon Dunes or CoursePreview service. Pointer distances are linear map estimates calibrated from selected tee to pin, not surveyed hazard carries or club recommendations. No GPS or live Bandon tee-sheet data is connected. Browser rendering has not been visually compared because the managed browser tool is unavailable.
+
+## Persistent connected-course experience
+
+The new round-demo screen uses the latest existing Bandon assets and Pinehurst media in separate hole-image and flyover views. It does not add imagery downloaded from the reference. Existing production media-rights limitations remain. Source attribution is visible in the interface.
+
+The whole-course view initializes a single Leaflet map and never attaches synthetic group coordinates to real terrain. It shows approximate course-area centers and optional actual device GPS with accuracy and freshness. No hole polygons are claimed. Demo group progress remains in a separate relative-progress panel, not projected onto uncalibrated images. Other courses have geographic previews but no invented hole media or scorecard facts. No shared GPS backend, actual rewards, or remote notifications are connected in this static release.
+
+Leaflet 1.9.4 JS/CSS are vendored under dist/vendor with their BSD license, avoiding a runtime CDN dependency for the map library. OpenStreetMap tiles and attribution remain external, subject to the community tile usage policy. The map persists through hole changes, simulation ticks, scenario selection, and view switches. Live shared tracking and geographically accurate hole transitions remain a separate field-test milestone.
