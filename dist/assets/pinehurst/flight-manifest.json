@@ -1,0 +1,128 @@
+[
+  {
+    "hole": 1,
+    "sourceStart": 93.32000000000001,
+    "sourceEnd": 134.305,
+    "duration": 8.0,
+    "bytes": 2785101
+  },
+  {
+    "hole": 2,
+    "sourceStart": 137.70499999999998,
+    "sourceEnd": 174.89000000000001,
+    "duration": 8.0,
+    "bytes": 3257578
+  },
+  {
+    "hole": 3,
+    "sourceStart": 178.29,
+    "sourceEnd": 209.97,
+    "duration": 8.0,
+    "bytes": 2780537
+  },
+  {
+    "hole": 4,
+    "sourceStart": 213.36999999999998,
+    "sourceEnd": 249.98000000000002,
+    "duration": 8.0,
+    "bytes": 2904378
+  },
+  {
+    "hole": 5,
+    "sourceStart": 253.38,
+    "sourceEnd": 295.5,
+    "duration": 8.0,
+    "bytes": 3648661
+  },
+  {
+    "hole": 6,
+    "sourceStart": 298.9,
+    "sourceEnd": 327.48,
+    "duration": 8.0,
+    "bytes": 3333998
+  },
+  {
+    "hole": 7,
+    "sourceStart": 330.88,
+    "sourceEnd": 372.37,
+    "duration": 8.0,
+    "bytes": 2973520
+  },
+  {
+    "hole": 8,
+    "sourceStart": 375.77,
+    "sourceEnd": 421.3,
+    "duration": 8.0,
+    "bytes": 3396438
+  },
+  {
+    "hole": 9,
+    "sourceStart": 476.12,
+    "sourceEnd": 501.54,
+    "duration": 8.0,
+    "bytes": 3564337
+  },
+  {
+    "hole": 10,
+    "sourceStart": 504.94,
+    "sourceEnd": 546.87,
+    "duration": 8.0,
+    "bytes": 3210058
+  },
+  {
+    "hole": 11,
+    "sourceStart": 550.2700000000001,
+    "sourceEnd": 587.3599999999999,
+    "duration": 8.0,
+    "bytes": 2950136
+  },
+  {
+    "hole": 12,
+    "sourceStart": 590.76,
+    "sourceEnd": 630.27,
+    "duration": 8.0,
+    "bytes": 3261979
+  },
+  {
+    "hole": 13,
+    "sourceStart": 633.6700000000001,
+    "sourceEnd": 674.0999999999999,
+    "duration": 8.0,
+    "bytes": 3163166
+  },
+  {
+    "hole": 14,
+    "sourceStart": 677.5,
+    "sourceEnd": 722.5799999999999,
+    "duration": 8.0,
+    "bytes": 3245858
+  },
+  {
+    "hole": 15,
+    "sourceStart": 725.98,
+    "sourceEnd": 760.1099999999999,
+    "duration": 8.0,
+    "bytes": 3083502
+  },
+  {
+    "hole": 16,
+    "sourceStart": 763.51,
+    "sourceEnd": 797.04,
+    "duration": 8.0,
+    "bytes": 3285274
+  },
+  {
+    "hole": 17,
+    "sourceStart": 800.44,
+    "sourceEnd": 829.24,
+    "duration": 8.0,
+    "bytes": 3556694
+  },
+  {
+    "hole": 18,
+    "sourceStart": 832.6400000000001,
+    "sourceEnd": 869.5999999999999,
+    "duration": 8.0,
+    "bytes": 2861433
+  }
+]

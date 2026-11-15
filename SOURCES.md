@@ -14,7 +14,11 @@ Publisher page: https://www.golfdigest.com/video/every-hole-at/every-hole-at-pin
 
 Official Pinehurst reference: https://www.pinehurst.com/news/every-hole-at-no-2/
 
-The app embeds the original YouTube player after a visitor clicks Enable drone footage. It does not download, edit or rehost the video. Hole timing cues were identified from the publisher video's captions. They follow narrated introductions; camera cuts need visual QA against the YouTube version. Hole 8's segment includes a greens-design interlude. Video seeking depends on network speed and YouTube keyframes and is not frame-exact. Playback remains subject to YouTube availability and embedding permissions. Original player controls and attribution remain available.
+The active experience uses native, silent video segments derived from the publisher’s publicly served copy of the same flyover. Each hole’s segment is retimed to eight seconds and encoded at 960×540, 24 fps, with keyframes every three frames and fast-start metadata. The original source video is not stored in the repository. The source link and Golf Digest credit are displayed in the experience.
+
+`dist/assets/pinehurst/flight-manifest.json` records each segment’s original source time range, output duration and byte size. `scripts/prepare-flight.py --source /path/to/source.mp4` reproduces the files using FFmpeg. The hole 8 segment ends before the long greens-design interlude. Native video stays paused; scroll position sets its time. Forward/reverse scrolling, hole navigation and overlays use the same progress value. This is an edited demonstration, not uninterrupted drone footage between all 18 holes; source camera cuts remain.
+
+Source hole timing cues were identified from the publisher’s captions. The first and last 1.7 seconds of each cue span are omitted. Visual QA of the packaged contact sheet confirms aerial course footage; exact original shot-to-hole matching and browser scrubbing performance still need browser review. All rights in source footage remain with their owners. No ownership of the footage is claimed.
 
 ## Hole-specific preview photos
 
@@ -27,6 +31,6 @@ https://tours.skyfoxgolf.com/storage/thumbnails/pinehurst_no2/hole1_thumbnail.jp
 
 ## Simulation
 
-Golfers, group names, current hole assignments, time spent on holes, fairway progress and ETA data are simulated. Position dots use elapsed time as a fraction of the demo hole target and do not represent geographic coordinates. No GPS, Pinehurst tee-sheet feed, or course operations feed is connected. Original schematic overview remains illustrative; the hole journey uses course-specific photos and the source video.
+Golfers, group names, current hole assignments, time spent on holes, fairway progress and ETA data are simulated. Group markers use elapsed time as a fraction of the demo hole target and a simple camera-progress screen projection. They do not represent geographic coordinates or computer-vision-tracked points in the footage. No GPS, Pinehurst tee-sheet feed, or course operations feed is connected. Original schematic overview remains illustrative; the hole journey uses course-specific photos and the source video.
 
 This is an independent concept demo, not an official Pinehurst, SkyFox or Golf Digest product.

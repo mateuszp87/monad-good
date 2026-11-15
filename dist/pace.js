@@ -36,8 +36,8 @@ export const seed = [
  {id:6,name:'Weekend Warriors',players:4,tee:530,hole:10,elapsed:160,inHole:15,slow:3},
  {id:7,name:'The Back Nine',players:4,tee:540,hole:10,elapsed:150,inHole:8,slow:0},
  {id:8,name:'Pin Seekers',players:3,tee:550,hole:9,elapsed:140,inHole:9,slow:0},
- {id:9,name:'Good Walk',players:2,tee:560,hole:9,elapsed:130,inHole:4,slow:0},
- {id:10,name:'Clubhouse Crew',players:4,tee:570,hole:8,elapsed:120,inHole:8,slow:0},
- {id:11,name:'Par Partners',players:4,tee:580,hole:8,elapsed:110,inHole:4,slow:0},
+ {id:9,name:'Good Walk',players:2,tee:630,hole:5,elapsed:60,inHole:4,slow:0},
+ {id:10,name:'Clubhouse Crew',players:4,tee:658,hole:3,elapsed:32,inHole:6,slow:0},
+ {id:11,name:'Par Partners',players:4,tee:686,hole:1,elapsed:4,inHole:4,slow:0},
  {id:12,name:'Fresh Cut',players:2,tee:590,hole:7,elapsed:100,inHole:7,slow:0}
 ];

@@ -14,8 +14,8 @@ Open http://localhost:8000. Use `npm test` for ETA tests and `npm run check` for
 
 ## What works
 
-- Scroll-driven 18-hole course journey with an illustrated moving map, group-specific arrival and clear-hole ETAs, hole targets and traffic.
-- Responsive sticky course illustration and reduced-motion support. Completed holes are marked played; historical arrivals are not invented.
+- Full-screen scroll-driven Pinehurst flight with group-specific arrival and clear-hole ETAs, hole targets and traffic.
+- Native video scrubbing, integrated pace overlays, illustrative group markers and reduced-motion support. Completed holes are marked played; historical arrivals are not invented.
 
 - Course operations dashboard, schematic map, per-hole occupancy, group search and pace filters.
 - Group detail views with current-hole targets, upcoming hole arrival estimates, and round finish ETAs.
@@ -39,10 +39,18 @@ Pinehurst No. 2 course facts and hole previews are sourced in SOURCES.md. Weathe
 
 The current app sends no messages, requests no GPS permissions and performs no blockchain transactions. Never commit private keys or service credentials.
 
-## Pinehurst No. 2 demo
+## Pinehurst No. 2 immersive flight
 
-The opening course journey now uses all 18 holes of Pinehurst No. 2, U.S. Open scorecard data and hole-specific aerial previews. Enable drone footage to load the source YouTube player; scrolling seeks through the corresponding hole's segment. Pause scroll sync to use normal playback. A jump selector and previous/next controls navigate all holes. Reduced-motion preferences disable smooth jumps and progressive video scrubbing.
+The opening view is now a full-screen scroll-controlled flight with the pace UI over the course footage. Scrolling down advances the camera; scrolling up reverses it; stopping holds the frame. Normal page scrolling is retained. The dashboard is available from the top-right button.
 
-Group position diagrams show simulated progress from tee to green, the number of golfers and pace for each group. Select a group marker for round details. The diagrams are explicitly not GPS overlays on the footage. All course targets remain illustrative.
+All 18 native video segments are packaged locally, each eight seconds long with keyframes every three frames for fast seeks. Two paused video elements swap between the current and next hole. The original YouTube player is no longer loaded. First-frame posters provide a fallback while a segment loads.
 
-See SOURCES.md for attribution, timing provenance and media limitations. YouTube autoplay, embedding and exact scene matching need browser verification; local data/model tests do not establish playback availability. If video loading fails, each hole retains its own static preview and a direct source-video link.
+Hole details, arrival/clear-hole ETAs and clickable simulated group markers update on the same hole timeline. The markers move using an illustrative perspective projection; they are not georeferenced to the footage or live GPS. Select another group, use Find my group, jump between holes, or advance the demo by five minutes. Still mode and OS reduced-motion preferences turn off camera movement within holes.
+
+See SOURCES.md and the flight manifest for source attribution and edit timing. To recreate the segments from a local source video with FFmpeg installed:
+
+```sh
+python3 scripts/prepare-flight.py --source /path/to/source.mp4
+```
+
+Local tests verify scroll mapping, forward/reverse navigation calculations, ETA state and media coverage. Packaged videos were checked with FFprobe for duration, codec, frame count, no audio and keyframe spacing. Browser rendering and device scrubbing performance remain unverified in this environment.

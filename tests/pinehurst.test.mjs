@@ -16,7 +16,7 @@ test('golf position simulation is bounded and excludes groups on other holes',()
  assert.equal(positionOnHole({inHole:500},14),.94);assert.equal(positionOnHole({inHole:-3},14),.04);
  const html=holeTraffic(10,seed,6);assert.ok(html.includes('Weekend Warriors'));assert.ok(html.includes('The Back Nine'));assert.ok(!html.includes('Fresh Cut'));assert.ok(html.includes('SIMULATED · NOT GPS'));
 });
-test('footage is opt-in with a direct source and complete fallback coverage',()=>{
- const html=journeyMarkup(seed[5],seed);assert.ok(html.includes('Enable drone footage'));assert.ok(!html.includes('<iframe'));assert.ok(html.includes('youtube.com/watch?v=o-e6617kfbU'));assert.ok(html.includes('Pinehurst'));
+test('footage is a native scroll surface with a direct source and all hole overlays',()=>{
+ const html=journeyMarkup(seed[5],seed);assert.ok(html.includes('flight-video-a'));assert.ok(html.includes('flight-video-b'));assert.ok(!html.includes('iframe_api'));assert.ok(!html.includes('<iframe'));assert.ok(html.includes('youtube.com/watch?v=o-e6617kfbU'));assert.ok(html.includes('Pinehurst'));
  for(const h of pinehurstHoles)assert.ok(html.includes(`data-chapter="${h.hole}"`));
 });
