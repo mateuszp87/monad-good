@@ -14,6 +14,9 @@ Open http://localhost:8000. Use `npm test` for ETA tests and `npm run check` for
 
 ## What works
 
+- Scroll-driven 18-hole course journey with an illustrated moving map, group-specific arrival and clear-hole ETAs, hole targets and traffic.
+- Responsive sticky course illustration and reduced-motion support. Completed holes are marked played; historical arrivals are not invented.
+
 - Course operations dashboard, schematic map, per-hole occupancy, group search and pace filters.
 - Group detail views with current-hole targets, upcoming hole arrival estimates, and round finish ETAs.
 - Five-minute simulation steps, local marshal check-in notes, player group selection and manual demo hole check-out.
