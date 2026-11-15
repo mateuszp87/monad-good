@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 test('Bandon controls change holes, tees, menu tabs, quality and full view',async()=>{
- const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8'),nodes=new Map(),events={},saved={};
+ const html=readFileSync(new URL('../dist/course-preview.html',import.meta.url),'utf8'),nodes=new Map(),events={},saved={};
  const keys=['document','window','location','history','matchMedia','requestAnimationFrame'];for(const k of keys)saved[k]=globalThis[k];
  const classes=new Set();
  function node(selector){if(!nodes.has(selector)){if(selector.startsWith('#'))assert.ok(html.includes(`id="${selector.slice(1)}"`),`Missing DOM target ${selector}`);const listeners={};nodes.set(selector,{hidden:['#course-menu','#settings-panel'].includes(selector),dataset:{},style:{},src:selector==='#course-map-frame'?'about:blank':'',textContent:'',innerHTML:'',classList:{add(){},remove(){}},addEventListener(k,fn){listeners[k]=fn;},setAttribute(k,v){this[k]=v;},getAttribute(k){return this[k];},close(){},showModal(){this.open=true;},load(){},pause(){},listeners});}return nodes.get(selector);}
