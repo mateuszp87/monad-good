@@ -9,7 +9,7 @@ A static HTML/CSS/ES-module site is served from `dist/`, with a retained Sites i
 - `play-model.js` / `traffic-model.js` / `group-context.js`: chronological tee-time groups, per-hole targets, scripted delay timing, context and straight-line distance.
 - `operations.js` / `operations.html`: independent course staff simulation. It uses the same model but not the same live session.
 - `course-map.js`: optional device geolocation overlay, accuracy circle and status; no upload path.
-- `wallet.js`: injected wallet discovery, account connection, Monad Testnet network setup and balance reads. No signer or reward contract path.
+- `wallet.js`: injected wallet discovery, account connection, Monad Testnet network setup and balance reads. The separate rewards page has explicit testnet transaction paths; see MONAD_REWARDS.md.
 - `preview.*`, `course-preview.html`, media and older dashboard modules: separate course previews and retained product experiments. They are not the live location service.
 
 ### Map behavior
@@ -39,3 +39,6 @@ Those are requirements for a live pilot, not deployed features. See PRODUCT_REQU
 
 ## Queue propagation refinement
 The schedule model gives each hole an entry and exit time for every group. The illustrative 08:20 hold delays the 08:30 group by 10 minutes and the 08:40 group by 4 minutes. A four-minute green-clearance headway is a demo capacity parameter, not a universal course target, safety distance or instruction to hit. Followers approach, wait, and release in playing order; their lost time carries into later holes and finish estimates. Completed groups leave the map. Catch-up guidance requires a sustained five-minute gap, sufficient open space in the model, and no blocked or uncertain observation. Physical safety and the course's rules always govern actual shots.
+
+## Testnet reward implementation
+The compiled DemoPaceRewards contract, ABI client and rewards page support user-confirmed deployment, owner approval, one claim per wallet/round and points reads. Runtime bytecode is checked before using an entered contract address. No predeployed address is configured and the assistant has not performed a Monad transaction. This is a non-cash points demonstration, not production reward funding or independently verified pace eligibility.

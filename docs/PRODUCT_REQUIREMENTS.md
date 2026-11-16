@@ -26,7 +26,8 @@ The primary job is to help golfers keep reasonable pace, understand traffic ahea
 | PRIV-01 | Anonymous group display by default; staff access scoped to course and active round | Demo anonymous labels; production identity/authorization pending |
 | PRIV-02 | Retain raw location history no longer than the agreed one-week policy; retain aggregated pace data separately | Proposed policy; no shared location history currently collected |
 | CHAIN-01 | Optional MetaMask connection to Monad Testnet and public balance read | Implemented, mocked tests; actual user wallet verification needed |
-| CHAIN-02 | Course-approved reward attestation, replay-safe claim and funded benefits | Proposed; no contract or real credits deployed |
+| CHAIN-02 | Owner approval and one-time claim of non-cash demo points on testnet | Contract/client implemented and local-bytecode tested; actual Monad deployment and user wallet confirmations pending |
+| CHAIN-03 | Independently verified pace eligibility and funded real course benefits | Not implemented; requires staff identity, reviewed attestation and redemption/funding |
 
 ## Production release gates
 

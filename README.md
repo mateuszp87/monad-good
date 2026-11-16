@@ -41,7 +41,7 @@ GitHub Actions runs the test and syntax-check commands on pushes and pull reques
 - Par-weighted illustrative hole targets, editable locally, plus a deterministic hole-5 delay and contextual alerts.
 - Independent staff demo with tee-time filtering, group inspection, hole targets and local observations.
 - Optional local device GPS, accuracy/status reporting and stop controls; foreground browser notifications when enabled.
-- MetaMask/EIP-1193/EIP-6963 connection, Monad Testnet network management and public balance reads in the optional [wallet view](https://fairway-flow-monad.ripethyme64.chatgpt.site/dashboard.html?view=rewards).
+- MetaMask/EIP-1193/EIP-6963 connection, Monad Testnet network management and public balance reads in the optional [reward flow](https://fairway-flow-monad.ripethyme64.chatgpt.site/rewards.html).
 
 ## What is not implemented
 
@@ -51,12 +51,15 @@ The recovery-shot explanation is scripted; GPS cannot identify why a group is st
 
 ## Monad and rewards
 
-The implemented integration connects a wallet to **Monad Testnet (chain ID 10143)** and reads its MON balance. It requests no transaction signatures, approvals or transfers. Test tokens have no promised monetary value. Check current network details with [Monad's official docs](https://docs.monad.xyz/).
+The wallet connection reads **Monad Testnet (chain ID 10143)** account and MON balance. The separate `rewards.html` page adds explicit user-confirmed deployment, course approval and claim transactions for the included `DemoPaceRewards` contract. It records 100 non-transferable, non-cash demo points per approved wallet/round and prevents duplicate claims. Mainnet is blocked in both the client and constructor.
 
-The proposed next phase is course-approved, traffic-adjusted eligibility, backed by a course-funded benefit and an optional signed on-chain claim. Location and personal data should remain off-chain. A reviewed contract, attestation backend, replay protection and funding are still required. Connecting a wallet does not issue a reward.
+The course chooses on pace after waiting adjustment, not eligible, or needs review. Only the contract owner can approve; golfers cannot claim without that on-chain approval. A one-wallet presentation can demonstrate both roles, but does not prove independent course verification.
+
+**No reward contract has been deployed or reward claimed on Monad by the assistant.** A user must connect a funded test wallet and confirm the deployment/approval/claim steps. The local EVM tests exercise actual bytecode. See [testnet reward setup](docs/MONAD_REWARDS.md). Real course credits, production attestation, funding and redemption remain future work. Points are not MON or money.
 
 ## Project guide
 
+- [Monad reward setup and limits](docs/MONAD_REWARDS.md)
 - [Product requirements and acceptance criteria](docs/PRODUCT_REQUIREMENTS.md)
 - [Architecture and production gaps](docs/ARCHITECTURE.md)
 - [Judge demonstration script](docs/DEMO_SCRIPT.md)

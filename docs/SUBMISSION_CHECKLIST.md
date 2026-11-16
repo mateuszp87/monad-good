@@ -6,7 +6,7 @@ Reviewed 2026-11-16 against the organizer's [Submission Process](https://monad-f
 
 | Item | Evidence / current status |
 |---|---|
-| Fork `monad-developers/monad-blitz-oregon` from main | **Deferred by the owner: keep only monad-good for now.** GitHub reports `mateuszp87/monad-good` is a standalone repo, not a fork. Copying template files does not establish fork provenance. |
+| Fork `monad-developers/monad-blitz-oregon` from main | **Deferred: owner requested no further fork work.** GitHub reports `mateuszp87/monad-good` is a standalone repo, not a fork. Copying template files does not establish fork provenance. |
 | Give the fork a project name and one-line description | Draft below; official submission fork not created yet |
 | Put project code and documentation in the fork | Current source prepared for review in monad-good; copy the same reviewed source into an official fork only if the owner later requests an official fork |
 | Open the event in the Blitz portal when submissions are open | **Not completed.** Event selection, current window and authenticated account not verified |
@@ -15,7 +15,7 @@ Reviewed 2026-11-16 against the organizer's [Submission Process](https://monad-f
 | Submit using the portal's Submit Project action | **Not submitted.** A GitHub push or PR is not a portal submission |
 | Make any edits before voting starts | Deadline/window not verified; confirm in the portal |
 
-The linked process does not by itself establish all event eligibility, judging rules, technical-chain requirements, mandatory video rules or current portal fields. Those remain to be checked against the actual event. No contract deployment or completed rewards pipeline is claimed.
+The linked process does not by itself establish all event eligibility, judging rules, technical-chain requirements, mandatory video rules or current portal fields. Those remain to be checked against the actual event. A locally tested testnet points contract is included, but actual Monad deployment and production reward eligibility are not complete.
 
 ## Ready-to-use draft
 
@@ -29,11 +29,11 @@ The linked process does not by itself establish all event eligibility, judging r
 
 **Project source:** https://github.com/mateuszp87/monad-good
 
-**Official submission fork URL:** Deferred by the owner — no official fork created; the organizer requirement remains unmet.
+**Official submission fork URL:** Not created: connected GitHub integration rejected fork creation (HTTP 403); organizer requirement remains unmet.
 
-**Description:** Fairway Flow visualizes anonymous tee-time groups across four golf courses. Golfers can inspect groups, compare their round with hole targets, look ahead at course traffic and investigate a scripted hole-5 delay. Staff get a separate map, attention filters and local observations. The demo distinguishes over-target play from waiting behind traffic. Optional GPS stays on the device; all other group positions are simulated. Monad Testnet wallet connection and balance reads are implemented. Shared tracking, background push, verified rewards and a claim contract remain future work.
+**Description:** Fairway Flow visualizes anonymous tee-time groups across four golf courses. Golfers can inspect groups, compare their round with hole targets, look ahead at course traffic and investigate a scripted hole-5 delay. Staff get a separate map, attention filters and local observations. The demo distinguishes over-target play from waiting behind traffic. Optional GPS stays on the device; all other group positions are simulated. Monad Testnet wallet connection plus a testnet-only approval/claim contract and UI are implemented; deployment and wallet confirmations are pending. Shared tracking, background push, verified rewards and a claim contract remain future work.
 
-**Monad integration:** EIP-1193/EIP-6963 wallet discovery, account connection, Monad Testnet setup (10143) and balance reads. No transaction, deployment, token mint or real course credit is performed.
+**Monad integration:** EIP-1193/EIP-6963 wallet discovery, account connection, Monad Testnet setup (10143) and balance reads. User-confirmed deployment, course approval and one-time non-cash points claims are supported. No actual Monad transaction has been performed by the assistant; no contract address is preconfigured and no real credit is issued.
 
 **Team details:** Confirm the actual teammates, names/handles and contact information in the portal. Do not infer or publish private account details from connector access.
 
@@ -45,7 +45,7 @@ The linked process does not by itself establish all event eligibility, judging r
 - [x] Current source, product requirements, architecture and demo instructions prepared.
 - [x] Automated timing, UI-handler, course/media and mocked provider checks available.
 - [ ] Review and merge the source-sync PR when desired; no automatic merge is authorized by this checklist.
-- [ ] Official fork requirement deferred at the owner's request; do not mark this complete.
+- [ ] Official fork deferred at the owner's latest request; no further fork work is part of this update.
 - [ ] Verify public judge access to the demo; current Sites access policy is custom, not confirmed public.
 - [ ] Perform real-phone visual/interaction testing and wallet verification.
 - [ ] Confirm team, current event rules, required media and submission window.
