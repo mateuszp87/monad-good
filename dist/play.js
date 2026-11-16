@@ -71,7 +71,7 @@ $('#group-scope').onchange=updateDetails;
 
 function openGroupDetails(){if(matchMedia('(max-width: 760px)').matches){document.body.classList.add('sheet-open');$('#sheet-toggle').setAttribute('aria-expanded','true');$('#sheet-toggle').textContent=detailMode==='group'?'Close group details ↓':'Close round details ↓';requestAnimationFrame(()=>$('#round-panel').scrollTo?.({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));}}
 
-$('#glance-join').onclick=requestJoin;$('#glance-details').onclick=()=>{setDetailMode('round');openGroupDetails();};$('#back-to-round').onclick=()=>{inspectingDelay=false;document.body.classList.remove('inspecting-delay');$('#incident-detail').hidden=true;setDetailMode('round');selected=8;update();};$('#nav-profile').onclick=()=>showDialog('profile-dialog');
+$('#glance-join').onclick=requestJoin;$('#glance-details').onclick=()=>{setDetailMode('round');openGroupDetails();};$('#back-to-round').onclick=()=>{inspectingDelay=false;document.body.classList.remove('inspecting-delay');$('#incident-detail').hidden=true;setDetailMode('round');selected=8;update();};$('#nav-profile').onclick=()=>{location.href='rewards.html';};$('#round-preferences').onclick=()=>showDialog('profile-dialog');
 $('#join-form').onsubmit=e=>{e.preventDefault();if($('#join-code').value.trim().toUpperCase()!=='FLOW0830'){$('#join-error').hidden=false;return;}closeDialog('join-dialog');startRound();};
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeDialog(b.dataset.close));
 $('#hole-menu').onclick=()=>{const open=document.body.classList.toggle('hole-menu-open');$('#hole-menu').setAttribute('aria-expanded',String(open));};
