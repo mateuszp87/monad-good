@@ -14,8 +14,9 @@ Fairway Flow is a phone-first golf traffic prototype: golfers watch anonymous te
 1. Choose Bandon Dunes, Pinehurst No. 2, Pebble Beach, or TPC Sawgrass.
 2. Watch traffic without joining, or join the simulated 08:30 group with `FLOW0830`.
 3. Pan, pinch/scroll to zoom, jump holes, or open **Whole course**. Dots reveal tee-time identity, position and pace on hover, keyboard focus or tap.
-4. In **Round settings**, choose **Show hole 5 delay**. The 07:50 group exceeds its illustrative hole target. Tap **View affected hole** to inspect timing and a scripted course note. Waiting groups are not penalized.
-5. While playing, select a fresh group on the same hole to see approximate straight-line yardage. Yardage is omitted across holes, in spectator mode and for uncertain locations. It is not a safe-to-hit signal.
+4. In **Round settings**, choose **Show hole 5 delay**. The 08:20 group exceeds its illustrative hole target. Tap **View affected hole** to inspect timing and a scripted course note. Waiting groups are not penalized.
+5. Choose **Show the queue behind it** to inspect waiting followers and the gradual recovery. The model retains their elapsed delay instead of snapping markers back onto schedule.
+6. While playing, select a fresh group on the same hole to see approximate straight-line yardage. Yardage is omitted across holes, in spectator mode and for uncertain locations. It is not a safe-to-hit signal.
 
 ## Run locally
 
@@ -46,7 +47,7 @@ GitHub Actions runs the test and syntax-check commands on pushes and pull reques
 
 No shared GPS backend, real course check-in service, production staff authentication, surveyed course zones, calibrated finish prediction, background tracking/push service, reward contract, token mint, real $5 credit, or on-chain reward claim is deployed. Browser-local storage is not a shared database or access-control system. Demo codes are not authentication. Staff observations are not transmitted. A wallet connection is not verified login.
 
-The ball-search explanation is scripted; GPS cannot identify why a group is stopped. Do not present the simulation as real golfers, official course targets, course partnerships, or a completed native iOS/watch app.
+The recovery-shot explanation is scripted; GPS cannot identify why a group is stopped. Do not present the simulation as real golfers, official course targets, course partnerships, or a completed native iOS/watch app.
 
 ## Monad and rewards
 

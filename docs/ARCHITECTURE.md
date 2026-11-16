@@ -20,7 +20,7 @@ Group dots retain larger hit areas. A selected group is distinct from the player
 
 ### Timing and alerts
 
-The 07:50 demonstration group begins 40 minutes before the player's 08:30 tee time. Its time on hole 5 is extended by eight minutes; an alert begins when its target is exceeded by three minutes. This is a deterministic simulation. A user taps to inspect the affected hole; unsolicited alerts do not take over the camera. A ball-search note is authored scenario content, not inferred activity. Hole target edits restart the local simulation.
+The 08:20 demonstration group begins 10 minutes before the player's 08:30 tee time. Its time on hole 5 is extended by sixteen minutes; an alert begins when its target is exceeded by three minutes. This is a deterministic simulation. A user taps to inspect the affected hole; unsolicited alerts do not take over the camera. A recovery-shot note is authored scenario content, not inferred activity. Hole target edits restart the local simulation.
 
 ### Storage and privacy
 
@@ -36,3 +36,6 @@ Hole targets, quiet mode and staff observations may be browser-local. Groups and
 - Optional reward eligibility/attestation service, course funding and reviewed Monad claim contract. Keep precise locations and personal data off-chain.
 
 Those are requirements for a live pilot, not deployed features. See PRODUCT_REQUIREMENTS.md for acceptance criteria.
+
+## Queue propagation refinement
+The schedule model gives each hole an entry and exit time for every group. The illustrative 08:20 hold delays the 08:30 group by 10 minutes and the 08:40 group by 4 minutes. A four-minute green-clearance headway is a demo capacity parameter, not a universal course target, safety distance or instruction to hit. Followers approach, wait, and release in playing order; their lost time carries into later holes and finish estimates. Completed groups leave the map. Catch-up guidance requires a sustained five-minute gap, sufficient open space in the model, and no blocked or uncertain observation. Physical safety and the course's rules always govern actual shots.

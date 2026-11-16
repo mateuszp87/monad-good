@@ -12,10 +12,12 @@ The primary job is to help golfers keep reasonable pace, understand traffic ahea
 | MAP-06 | Yardages appear only in a player round for fresh groups on the same hole; explain straight-line approximation | Demo implemented; never a clearance-to-hit tool |
 | PACE-01 | Course can set a target per hole; validate 18 whole-number values from 5–30 minutes | Local demo implemented; authenticated shared configuration needed |
 | PACE-02 | Separate over-target play, an available gap, a traffic queue, and uncertain tracking | Demo implemented; field calibration required |
-| PACE-03 | Scripted 07:50 group holds on hole 5; over-target alert follows a 3-minute grace period | Demo implemented; targets/grace require course validation |
+| PACE-03 | Scripted 08:20 group holds on hole 5; over-target alert follows a 3-minute grace period | Demo implemented; targets/grace require course validation |
 | PACE-04 | Tapping a delay opens affected hole and shows target, elapsed time, overrun, evidence and attributed reason | Demo implemented; live reasons require golfer/staff confirmation |
 | PACE-05 | Alerts do not move a browsing user's camera without an explicit action | Demo implemented |
 | PACE-06 | Waiting behind traffic does not create a catch-up warning or reward penalty | Demo implemented; production eligibility engine not built |
+| PACE-08 | A hold queues following groups, releases in order, carries elapsed delay forward and ends the round at modeled completion | Demo implemented; capacity assumptions require course validation |
+| PACE-09 | Catch-up nudges require a sustained gap and must be suppressed for waiting or uncertain positions | Demo implemented; not a safe-to-hit signal |
 | PACE-07 | Finish estimate reflects modeled delay rather than adding every upstream delay indiscriminately | Demo heuristic; not a validated prediction |
 | ROUND-01 | Watch without joining; start/check-in; return to own group; stop GPS/end round | Demo implemented; code FLOW0830 is not real check-in |
 | OPS-01 | Course-wide map, tee-time list, attention filters and observations | Local independent demo; no staff dispatch or cross-device synchronization |
