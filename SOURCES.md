@@ -160,3 +160,7 @@ Hero photograph: Tewy, “Pebble Beach Golf Links 01.jpg,” 18th green, July 13
 
 ## Hole-target traffic scenario
 Par-weighted illustrative 18-hole targets sum to each course's configured round target. Per-hole edits (5–30 whole minutes) are browser-local demo settings, not official course standards. The 07:50 group is held continuously on hole 5 for eight additional minutes; a warning begins after the target plus a three-minute grace period. The ball-search explanation is an explicitly scripted course note, not a GPS inference. Alert inspection is user-triggered; normal playback never moves the camera for an unsolicited alert. Targets, elapsed time, course traffic counts, approximate geographic straight-line distances and playing order are simulated. Terrain boundaries are community-mapped, not surveyed. Historical aerial imagery resolution has not increased.
+
+## Close zoom and group dots
+
+The main map permits zoom level 20 and transitions from historical aerial tiles to local vector terrain beyond level 16.75. Native photographic resolution remains level 16. Group marker dots retain 44px interaction targets and reveal identity/context on hover, focus or selection. Same-hole player-relative yardages are approximate simulated straight-line distances, suppressed across holes, in spectator mode and for stale locations; they are not a safe-to-hit signal. Organizer submission provenance is documented separately in docs/SUBMISSION_CHECKLIST.md; no portal completion or official fork is implied by a source push.
